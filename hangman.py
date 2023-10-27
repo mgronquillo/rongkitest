@@ -20,8 +20,10 @@ while not is_gameover:
     os.system('cls')
     print(logo)
     while not len(guess) == 1 or not guess.isalpha():
-         guess = input('Invalid input, enter one letter only: ')
-         print(' '.join(display))
+        print(stages[lives])
+        print(' '.join(display))
+        guess = input('Invalid input, enter one letter only: ')
+        os.system('cls')
     
     # If guess is not in chosen_word, minus one life
     if guess not in chosen_word:
